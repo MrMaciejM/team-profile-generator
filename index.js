@@ -10,4 +10,8 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./src/page-template.js");
 
+// importing questions and inquirer prompts
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
+
+// create objects for each team member
+// when a user starts application then they are prompted to enter the team manager creds
