@@ -20,6 +20,8 @@ Screenshot of the HTML after creating a template team. Video demo link just belo
 
 ![](./assets/team-generator-app.png)
 
+![](./assets/team-generator-app.gif)
+
 https://watch.screencastify.com/v/pyXCIwCG7YXAbu9iZGBh
 
 ## Links
