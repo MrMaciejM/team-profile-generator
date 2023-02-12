@@ -23,20 +23,18 @@ const questions = [
       name: "officeNumber",
       message: "Enter team manager's number",
     },
+    {
+      type: "list",
+      name: "addEmployee",
+      message: "Choose one of the following:",
+      choices: ["Add an engineer", "Add an intern", "Finish building the team"],
+    },
   ]),
   (engQuestions = [
     {
       type: "input",
       name: "name",
       message: "Enter Engineer's name",
-    },
-  ]),
-  (choices = [
-    {
-      type: "list",
-      name: "addEmployee",
-      message: "Choose one of the following:",
-      choices: ["Add an engineer", "Add an intern", "Finish building the team"],
     },
   ]),
 ];

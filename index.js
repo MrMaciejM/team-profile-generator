@@ -13,10 +13,8 @@ const render = require("./src/page-template.js");
 const questions = require("./questions");
 // importing questions and inquirer prompts
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
+let result = [];
 
-// create objects for each team member
-// when a user starts application then they are prompted to enter the team manager creds
-//console.log(engQuestions);
 function init() {
   inquirer.prompt(mgrQuestions).then((mgrData) => {
     const newManager = new Manager(
@@ -25,12 +23,19 @@ function init() {
       mgrData.email,
       mgrData.officeNumber
     );
+    const createHtml = render(result);
+    const addEng = "Add an engineer";
+    const addInt = "Add an intern";
+    const finish = "Finish building the team";
 
-    render(newManager);
-
-    //console.log(generateTeam);
-    //console.log(mgrData);
-    //console.log(newManager);
+    if (mgrData.choices === addEng) {
+      inquirer.prompt(engQuestions).then((engData) => {
+        result.push(engData);
+        fs.writeFile("team.html", createHtml, (error) => {
+          error ? console.log(error) : "team created";
+        });
+      });
+    }
 
     //inquirer.prompt(choices).then((employeeData) => {
     //
@@ -39,3 +44,14 @@ function init() {
   });
 }
 init();
+
+/*
+//NOTE: mgrData must be pushed into an array (which is result), because of the map in page-template.js file. Otherwise you will get TypeError.
+    result.push(newManager);
+
+    const createHtml = render(result);
+    fs.writeFile("team.html", createHtml, (error) => {
+      error ? console.log(error) : "team created";
+    });
+
+*/
