@@ -71,24 +71,3 @@ const questions = [
 ];
 
 module.exports = questions;
-//module.exports = mgrQuestions;
-//module.exports = engQuestions;
-//module.exports = mgrQuestions;
-
-/*
-{
-    type: "input",
-    name: "id",
-    message: "Enter team manager's ID",
-  },
-  {
-    type: "input",
-    name: "email",
-    message: "Enter team manager's email address",
-  },
-  {
-    type: "input",
-    name: "officeNumber",
-    message: "Enter team manager's office number",
-  },
-*/
