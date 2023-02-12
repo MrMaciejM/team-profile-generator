@@ -7,6 +7,13 @@ const questions = [
       type: "input",
       name: "name",
       message: "Enter team manager's name",
+      validate: (mgrName) => {
+        if (mgrName.length == 0) {
+          return "Name must have at least 1 character";
+        } else {
+          return true;
+        }
+      },
     },
     {
       type: "input",
